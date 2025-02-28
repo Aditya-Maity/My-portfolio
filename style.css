@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+    --main-color: #7b2cbf;
+}
+
+body {
+    height: 100vh;
+}
+
+.conatiner {
+    height: 100%;
+    width: auto;
+    background-image: url(backgroum2.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Navbar*/
+.navbar {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#logo {
+    height: 40px;
+    border-radius: 40%;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out 0.1s;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    display: inline;
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar ul li:hover {
+    transform: scale(1.05);
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul li a {
+    font-family: Oswald;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #ffcc00;
+    border-radius: 100px;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/*Hero Section*/
+#hero {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.hero_left{
+    height: auto;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+#hero_pfp {
+    height: 250px;
+    border-radius: 50%;
+    border: 0.8px solid rgb(180, 68, 88);
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#hero_pfp:hover {
+    transform: scale(1.03);
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.1);
+    ;
+}
+
+.hero_ability {
+    display: inline;
+    width: 50%;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.skill-box {
+    width: 100%;
+    margin: 25px 0;
+}
+
+.skill-box .name {
+    display: block;
+    font-size: 15px;
+}
+
+.skill-box .skill-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 6px;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.skill-bar .skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background-color: #000;
+    animation: progress 1.4s ease-in-out forwards;
+    opacity: 0%;
+}
+
+.skill-per.lead{
+    width: 80%;
+    animation-delay: 0.10;
+}
+.skill-per.com{
+    width: 90%;
+    animation-delay: 0.5;
+}
+
+.skill-per.flex{
+    width: 85%;
+    animation-delay: 0.7;
+}
+
+.skill-per.lead{
+    width: 83%;
+    animation-delay: 0.9;
+}
+
+.skill-per.manage{
+    width: 80%;
+    animation-delay: 0.10;
+}
+
+@keyframes progress{
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 100%
+    }
+}
+
+.skill-box .tool-tip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 600%;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #000;
+    z-index: 1;
+}
+
+.tool-tip::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    font-weight: 10px;
+    z-index: -1;
+    background: #000;
+    transform: translate(-50%) rotate(45deg);
+}
+
+.hero_content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.hero_content h1 {
+    color: #fff;
+    font-size: 40px;
+    text-align: left;
+}
+
+.hero_content h1 span {
+    color: aliceblue;
+    font-size: 75px;
+}
+
+.hero_content p {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    width: 90%;
+    font-size: 20px;
+    color: #ffff;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.icons a i {
+    color: white;
+}
+
+/*About Section*/
