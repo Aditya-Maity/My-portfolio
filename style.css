@@ -39,12 +39,13 @@ body {
     height: 40px;
     border-radius: 40%;
     transform: scale(1);
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #logo:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar ul {
@@ -125,7 +126,7 @@ body {
 }
 
 #hero_pfp {
-    height: 300px;
+    height: 350px;
     border-radius: 50%;
     border: 0.8px solid #151C38;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -133,7 +134,7 @@ body {
 
 #hero_pfp:hover {
     transform: scale(1.01);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /*---Hero ability---*/
@@ -149,7 +150,7 @@ body {
 
 .hero_ability:hover {
     transform: scale(1.01);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .skill-box {
@@ -255,11 +256,12 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     transform: scale(1);
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .hero_content:hover {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
     transform: scale(1.01);
 }
 
@@ -267,12 +269,13 @@ body {
     color: #fff;
     font-size: 40px;
     text-align: left;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .hero_content h1:hover {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    transform: scale(1.002);
+    color: #e2e1e1;
+    text-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.003);
 }
 
 .hero_content h1 span {
@@ -290,7 +293,8 @@ body {
 }
 
 .hero_content p:hover {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #e2e1e1;
+    text-shadow: 0.4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .icons {
@@ -308,13 +312,14 @@ body {
 }
 
 .icons a i:hover {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    transform: scale(1.002);
+    color: #e2e1e1;
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.07);
 }
 
 /*---Education Section---*/
 .timeline-wrapper {
-    background-color: #131B32;
+    background-color: #f9f7f3;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -332,7 +337,7 @@ body {
 
 
 .heading {
-    color: #fff;
+    color: black;
     font-size: 2.7rem;
     margin: 2rem 0;
     display: flex;
@@ -342,18 +347,19 @@ body {
 }
 
 .heading i {
-    color: #fff;
+    color: black;
     font-size: 4rem;
 }
 
 .content-box {
-    color: #fff;
+    background-color: white;
+    color: black;
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 2rem;
-    margin: 0.5rem;
+    margin: 0.7rem;
     background-color: rgba(red, green, blue, 0.15);
     backdrop-filter: blur(5px);
     border: 3px solid rgb(110, 110, 110);
@@ -367,7 +373,7 @@ body {
 
 .content-box:hover {
     transform: scale(1.015);
-    box-shadow: 0 0 25px black;
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
     border: 3px solid black;
     backdrop-filter: blur(6px);
 
@@ -377,12 +383,16 @@ body {
     font-size: 1.3rem;
 }
 
+.content-box p {
+    font-size: 1.2rem;
+}
+
 .content-box::before {
     position: absolute;
     content: '';
     width: 25px;
     height: 25px;
-    background-color: white;
+    background-color: black;
     border-radius: 50%;
     left: -55px;
     top: 50%;
@@ -394,91 +404,85 @@ body {
     flex-direction: column;
     gap: 5rem;
     padding-left: 30px;
-    border-left: 5px solid white;
+    border-left: 5px solid black;
 }
 
 
 .date {
     font-size: 1.7rem;
-    color: white;
+    color: black;
     font-weight: 700;
 }
 
 /*---Skills---*/
-.skills {
-    height: 100vh;
+.skills-section {
+   height: 100vh;
+   background-color: #131B32;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     background-color: #131B32;
 }
 
-.skills-box {
-    width: 50%;
-    margin: 25px 0;
+
+.skills .con{
+    
+    background-color: #192239;
+    border-radius: 25px;
+    color: black;
+    padding: 2rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
 }
 
-.skills .name {
-    color: #fff;
-    display: block;
-    font-size: 25px;
+.skills .con .row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
 }
 
-.skills-box .skills-bar {
-    height: 20px;
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: relative;
+.skills .con .bar{
+    margin: 15px;
+    padding: 10px;
+    border: 1rem;
+    border-radius: 25px;
+    background-color: #7b2cbf;
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.skills-bar .skills-per {
-    position: relative;
-    display: block;
-    height: 100%;
-    width: 0;
-    background-color: #fff;
-    animation: progress 1.4s ease-in-out forwards;
-    opacity: 1;
-    border-radius: 10px;
+.skills .con .bar:hover{
+    box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.03);
+}
+
+.skills .con .bar .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skills .con .bar .info span{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.icon{
+    height: 50px;
 }
 
 
-.skills-per.java {
-    width: 80%;
-    animation-delay: 0.1s;
-}
-
-.skills-per.py {
-    width: 80%;
-    animation-delay: 0.1s;
-}
-
-.skills-per.C {
-    width: 85%;
-    animation-delay: 0.1s;
-}
 
 
-.skills-box .tools-tip {
-    position: absolute;
-    right: -14px;
-    top: -28px;
-    font-size: 9px;
-    font-weight: 600;
-    color: #000;
-    padding: 2px 6px;
-    border-radius: 3px;
-    background: #fff;
-    z-index: 1;
-}
 
-.tools-tip::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    transform: translate(-50%) rotate(45deg);
-    z-index: -1;
-}
+
