@@ -417,11 +417,11 @@ body {
 
 /*---Skills---*/
 .skills-section {
-   height: 100vh;
-   background-color: #131B32;
+    height: 100vh;
+    background-color: #131B32;
 }
 
-.skills{
+.skills {
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -430,7 +430,7 @@ body {
 }
 
 
-.skills .con{
+.skills .con {
     background-color: #192239;
     border-radius: 25px;
     color: black;
@@ -440,14 +440,14 @@ body {
     margin-top: 2rem;
 }
 
-.skills .con .row{
+.skills .con .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     gap: 1.8rem;
 }
 
-.skills .con .bar{
+.skills .con .bar {
     margin: 15px;
     padding: 10px;
     border: 1rem;
@@ -458,12 +458,12 @@ body {
     cursor: pointer;
 }
 
-.skills .con .bar:hover{
+.skills .con .bar:hover {
     box-shadow: 0.4px 10px rgba(0, 0, 0, 0.1);
     transform: scale(1.03);
 }
 
-.skills .con .bar .info{
+.skills .con .bar .info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -471,36 +471,37 @@ body {
     margin-top: 1rem;
 }
 
-.skills .con .bar .info span{
+.skills .con .bar .info span {
     font-size: 2rem;
     font-weight: 500;
     margin-left: 0.5rem;
 }
 
-.icon{
+.icon {
     height: 50px;
 }
 
 /*---Service Section---*/
-.service{
+.service {
     height: 100vh;
     width: 100%;
     padding: 100px;
 }
 
-.service h2{
+.service h2 {
     color: black;
     font: 11;
 }
 
-.box{
+
+.box {
     display: flex;
     justify-self: center;
     align-self: center;
     min-height: 400px;
 }
 
-.card{
+.card {
     height: 400px;
     width: 370px;
     padding: 20px 35px;
@@ -511,29 +512,29 @@ body {
     text-align: center;
 }
 
-.card i{
+.card i {
     font-size: 50px;
     display: block;
     text-align: center;
     margin: 25px 0px;
     color: black;
-    
+
 }
 
-h5{
+h5 {
     color: black;
-    font-size: 23px ;
+    font-size: 23px;
     margin-bottom: 15px;
 }
 
-.para p{
+.para p {
     color: #C85B61;
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 25px;
 }
 
-.card .button{ 
+.card .button {
     background-color: #000;
     color: white;
     text-decoration: none;
@@ -544,11 +545,133 @@ h5{
     transition: transform 0.3s ease-in-out, color 0.3s;
 }
 
-.card .button:hover{
+.card .button:hover {
     transform: scale(1.015);
-    box-shadow: 0.4px 5px rgba(0, 0, 0, 0.1);    
-    
+    box-shadow: 0.4px 5px rgba(0, 0, 0, 0.1);
+
 }
 
+/*---Projects Section---*/
+.projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
 
+.projects .cardbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
 
+.left_img {
+    width: 250px;
+}
+
+.right {
+    width: 70%;
+
+}
+
+.cards {
+    height: 400px;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 35px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cards i {
+    font-size: 80px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: black;
+}
+
+h5 {
+    color: black;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.cards .right {
+    margin: 20px;
+    padding: 10px;
+}
+
+.cards .right .para p {
+    color: #C85B61;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.cards .button {
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.cards .button:hover {
+    transform: scale(1.015);
+    box-shadow: 0.4px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*---Contact Us---*/
+.contact{
+    height: 100vh;
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+}
